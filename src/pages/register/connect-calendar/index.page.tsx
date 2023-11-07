@@ -5,10 +5,9 @@ import { AuthError, ConnectBox, ConnectItem } from "./styles";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
-export default function Register() {
+export default function ConnectCalendar() {
   const router = useRouter()
   const session = useSession()
-
 
   const hasAuthError = !!router.query.error
   const isSignedIn = session.status == 'authenticated'
